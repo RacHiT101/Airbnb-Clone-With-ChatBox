@@ -1,7 +1,7 @@
 import {useContext, useEffect, useState} from "react";
 import {differenceInCalendarDays} from "date-fns";
 import axios from "axios";
-import {Navigate} from "react-router-dom";
+import {Link, Navigate} from "react-router-dom";
 import {UserContext} from "./UserContext.jsx";
 
 export default function BookingWidget({place}) {
@@ -82,6 +82,10 @@ export default function BookingWidget({place}) {
           <span> ${numberOfNights * place.price}</span>
         )}
       </button>
+      <Link to={'/chat'} className="primary mt-4">
+        Chat
+        {numberOfNights > 0 }
+      </Link>
     </div>
   );
 }
