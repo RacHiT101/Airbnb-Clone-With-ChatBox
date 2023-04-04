@@ -1,4 +1,4 @@
-# Airbnb-Clone
+# Airbnb-Clone With ChatBox
 
 This repository contains the code for a booking website that allows users to book various accommodations such as hotels, motels, apartments, and vacation homes.
 
@@ -8,6 +8,7 @@ This repository contains the code for a booking website that allows users to boo
 * Search and filter accommodations by location, price range, and type
 * Detailed accommodation information including amenities, photos, and reviews
 * Can list your own destination for the users and edit them in future
+* Chat with Other People interested and owner
 
 
 # Technologies Used
