@@ -15,8 +15,8 @@ const IndexPage = () => {
   return (
     <div className="mt-5 grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
       {places.length > 0 && places.map(place => (
-        <Link to={'/place/'+place._id}>
-          <div className="bg-gray-500 mb-2 rounded-2xl flex flex-wrap">
+        <Link key={place._id} to={'/place/'+place._id}>
+          <div  className="bg-gray-500 mb-2 rounded-2xl flex flex-wrap">
             {place.photos?.[0] && (
               <Image className="rounded-2xl lg:h-96 md:h-80 sm:h-80 object-cover w-full " src={place.photos?.[0]} alt=""/>
             )}

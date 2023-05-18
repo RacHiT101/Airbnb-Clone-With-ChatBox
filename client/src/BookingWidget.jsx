@@ -82,9 +82,10 @@ export default function BookingWidget({place}) {
           <span> ${numberOfNights * place.price}</span>
         )}
       </button>
-      <Link to={'/chat'} className="primary mt-4">
+      <Link to={'/chat'}><button className="primary mt-4">
         Chat
         {numberOfNights > 0 }
+        </button>
       </Link>
     </div>
   );

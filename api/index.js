@@ -28,13 +28,17 @@ app.use(
 );
 
 function getUserDataFromReq(req) {
-    return new Promise((resolve, reject) => {
-      jwt.verify(req.cookies.token, jwtSecret, {}, async (err, userData) => {
-        if (err) throw err;
+  return new Promise((resolve, reject) => {
+    jwt.verify(req.cookies.token, jwtSecret, {}, (err, userData) => {
+      if (err) {
+        reject(err);
+      } else {
         resolve(userData);
-      });
+      }
     });
-  }
+  });
+}
+
 
 mongoose.connect(process.env.MONGO_URL);
 
@@ -221,12 +225,9 @@ app.get('/places/:id', async (req,res) => {
     res.json( await Booking.find({user:userData.id}).populate('place') );
   });
 
-app.listen(2000);
-
-
-
 
 const http = require("http");
+
 const { Server } = require("socket.io");
 
 app.use(cors());
@@ -259,3 +260,8 @@ io.on("connection", (socket) => {
 server.listen(3003, () => {
   console.log("SERVER CHALU HAI BHAI");
 });
+
+
+app.listen(2000);
+
+
