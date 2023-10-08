@@ -14,7 +14,7 @@ import BookingPage from "./pages/BookingPage";
 import Chat from "./components/Chat";
 import Chats from "./Chats";
 
-axios.defaults.baseURL = "http://localhost:2000"
+axios.defaults.baseURL = "https://airbnb-clone-with-chat-box.vercel.app"
 axios.defaults.withCredentials = true
 
 function App() {

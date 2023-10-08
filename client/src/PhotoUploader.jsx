@@ -64,7 +64,7 @@ const PhotoUploader = ({ addedPhotos, onChange }) => {
             return (
               <div className="h-32 flex relative" key={link}>
                 <img
-                  src={"http://localhost:2000/uploads/" + link}
+                  src={"https://airbnb-clone-with-chat-box.vercel.app/uploads/" + link}
                   alt="Hii"
                   className="rounded-2xl w-full object-cover"
                 />
