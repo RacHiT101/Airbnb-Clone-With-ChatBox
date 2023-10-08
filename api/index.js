@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: "https://airbnb-clone-with-chat-box.vercel.app",
   })
 );
 
@@ -234,7 +234,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://airbnb-clone-with-chat-box.vercel.app",
     methods: ["GET", "POST"],
   },
 });
